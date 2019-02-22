@@ -24,30 +24,30 @@
                                     <constraint firstAttribute="height" constant="100" id="b7E-XJ-Sbr"/>
                                     <constraint firstAttribute="width" constant="200" id="qEU-Vv-CGb"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="estonia"/>
+                                <state key="normal" title="Button" image="us"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmH-vL-xgK">
-                                <rect key="frame" x="87.5" y="240" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="220" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="DoA-3q-soL"/>
                                     <constraint firstAttribute="height" constant="100" id="Dzv-FF-ini"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="france"/>
+                                <state key="normal" title="Button" image="us"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLa-fG-uEt">
-                                <rect key="frame" x="87.5" y="360" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="340" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="c13-gV-xIY"/>
                                     <constraint firstAttribute="width" constant="200" id="cGH-PZ-JKP"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="germany"/>
+                                <state key="normal" title="Button" image="us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nLa-fG-uEt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DzP-NL-O97"/>
                             <constraint firstItem="rmH-vL-xgK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYa-ZV-ZCQ"/>
-                            <constraint firstItem="rmH-vL-xgK" firstAttribute="top" secondItem="rCE-Pn-vQb" secondAttribute="bottom" constant="40" id="RzI-ed-WWr"/>
+                            <constraint firstItem="rmH-vL-xgK" firstAttribute="top" secondItem="rCE-Pn-vQb" secondAttribute="bottom" constant="20" id="RzI-ed-WWr"/>
                             <constraint firstItem="rCE-Pn-vQb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZDB-jj-UKY"/>
                             <constraint firstItem="nLa-fG-uEt" firstAttribute="top" secondItem="rmH-vL-xgK" secondAttribute="bottom" constant="20" id="lRo-e4-lwY"/>
                             <constraint firstItem="rCE-Pn-vQb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="tDG-FP-QdY"/>
@@ -85,8 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="estonia" width="200" height="100"/>
-        <image name="france" width="200" height="100"/>
-        <image name="germany" width="200" height="100"/>
+        <image name="us" width="200" height="100"/>
     </resources>
 </document>
