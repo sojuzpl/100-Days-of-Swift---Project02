@@ -13,40 +13,45 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
+    @IBOutlet var nextRoundButton: UIButton!
+    @IBOutlet var countryName: UILabel!
     
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var round = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
-        // Do any additional setup after loading the view, typically from a nib.
         
-        // buttons setup
-        button1.layer.borderWidth = 1
-        button2.layer.borderWidth = 1
-        button3.layer.borderWidth = 1
-        
-        button1.layer.borderColor = UIColor.lightGray.cgColor
-        button2.layer.borderColor = UIColor.lightGray.cgColor
-        button3.layer.borderColor = UIColor.lightGray.cgColor
-
         askQuestion(action: nil)
-        
     }
+    
+//    1. Try showing the player’s score in the navigation bar, alongside the flag to guess.
+//    2. Keep track of how many questions have been asked, and show one final alert controller after they have answered 10. This should show their final score.
+//    3. When someone chooses the wrong flag, tell them their mistake in your alert message – something like “Wrong! That’s the flag of France,” for example.
+//    4. Add rounded corners
     
     
     func askQuestion(action: UIAlertAction!) {
+        
+        button1.isEnabled = true
+        button2.isEnabled = true
+        button3.isEnabled = true
+
+        nextRoundButton.isHidden = true
+
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        countryName.text = "\(countries[correctAnswer].uppercased())?"
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
+        title = "Round \(round) from 10"
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -54,20 +59,37 @@ class ViewController: UIViewController {
         var title: String
         
         if sender.tag == correctAnswer {
+            sender.pulsate()
             title = "Correct"
             score += 1
         } else {
+            sender.shake()
             title = "Wrong"
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        round += 1
         
+        if round == 11 {
+            let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Play again", style: .default, handler: askQuestion))
+            score = 0
+            round = 1
+            present(ac, animated: true)
+        } else {
+            button1.isEnabled = false
+            button1.adjustsImageWhenDisabled = false
+            button2.isEnabled = false
+            button2.adjustsImageWhenDisabled = false
+            button3.isEnabled = false
+            button3.adjustsImageWhenDisabled = false
+
+            nextRoundButton.isHidden = false
+        }
     }
     
-
-
+    @IBAction func nextRoundTapped(_ sender: UIButton) {
+        askQuestion(action: nil)
+    }
 }
 

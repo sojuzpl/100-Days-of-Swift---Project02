@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B72167622215A99003EB7D1 /* ibdBorderCornerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72167522215A99003EB7D1 /* ibdBorderCornerShadow.swift */; };
+		4B72167922215CB7003EB7D1 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72167822215CB7003EB7D1 /* UIButtonExtension.swift */; };
 		4B95834222204BBB00432FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B95834122204BBB00432FB4 /* AppDelegate.swift */; };
 		4B95834422204BBB00432FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B95834322204BBB00432FB4 /* ViewController.swift */; };
 		4B95834722204BBB00432FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B95834522204BBB00432FB4 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B72167522215A99003EB7D1 /* ibdBorderCornerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ibdBorderCornerShadow.swift; sourceTree = "<group>"; };
+		4B72167822215CB7003EB7D1 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		4B95833E22204BBB00432FB4 /* Project02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B95834122204BBB00432FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B95834322204BBB00432FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B721672222157B5003EB7D1 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				4B72167522215A99003EB7D1 /* ibdBorderCornerShadow.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
+		4B72167722215C84003EB7D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B72167822215CB7003EB7D1 /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4B95833522204BBB00432FB4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +74,8 @@
 		4B95834022204BBB00432FB4 /* Project02 */ = {
 			isa = PBXGroup;
 			children = (
+				4B72167722215C84003EB7D1 /* Extensions */,
+				4B721672222157B5003EB7D1 /* IBDesignables */,
 				4B95834122204BBB00432FB4 /* AppDelegate.swift */,
 				4B95834322204BBB00432FB4 /* ViewController.swift */,
 				4B95834522204BBB00432FB4 /* Main.storyboard */,
@@ -136,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B95834422204BBB00432FB4 /* ViewController.swift in Sources */,
+				4B72167922215CB7003EB7D1 /* UIButtonExtension.swift in Sources */,
 				4B95834222204BBB00432FB4 /* AppDelegate.swift in Sources */,
+				4B72167622215A99003EB7D1 /* ibdBorderCornerShadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
