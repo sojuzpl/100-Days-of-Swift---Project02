@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
       
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+//        UIBarButtonItem(UIImage(named: "someImage.png").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleClick))
+        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Round", style: .plain, target: self, action: #selector(showRound))
+        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "scoring"), style: .plain, target: self, action: #selector(showCurrentScore))
+        
+//        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showRound))
+        let currentScore = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showCurrentScore))
+        
+        navigationItem.rightBarButtonItems = [currentScore]
         
         askQuestion(action: nil)
     }
@@ -52,6 +62,18 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         title = "Round \(round) from 10"
+    }
+    
+    @objc func showRound() {
+        
+    }
+    
+    @objc func showCurrentScore() {
+        
+        let ac = UIAlertController(title: "Current Score", message: "Your current score is \(score) from \(round - 1)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(ac, animated: true)
+        
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
