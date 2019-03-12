@@ -1,4 +1,4 @@
-# 100 Days of Swift - Project 01
+# 100 Days of Swift - Project 02
 
 I placed finished project 02 (days 19-21). I added a little changed challeange and new feature for this "Guess the Flag" app
 
