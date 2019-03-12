@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Project02
+//  Project06a
 //
 //  Created by Zbigniew Pietras on 22/02/2019.
 //  Copyright © 2019 Zbigniew Pietras. All rights reserved.
